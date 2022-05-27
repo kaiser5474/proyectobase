@@ -2,14 +2,17 @@ import { useState, createContext } from "react";
 
 const LetrasContext = createContext();
 
-const LetrasProvider = () => {
+const LetrasProvider = ({children}) => {
 
+    const nombre = "Artista";
 
     return (
         <LetrasContext.Provider
-            value={{}}        
+            value={{
+                nombre
+            }}        
         >
-            {/* {children} */}
+            {children}
         </LetrasContext.Provider>
     )
 }

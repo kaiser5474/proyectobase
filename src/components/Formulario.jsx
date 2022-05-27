@@ -1,6 +1,8 @@
 import {useState} from 'react'
+import useLetras from '../hooks/useLetras';
 
 const Formulario = () => {
+    const {nombre} = useLetras();
     const [busqueda, setBusqueda] = useState({
         artista: '',
         cancion: ''
@@ -10,7 +12,7 @@ const Formulario = () => {
         <legend>Busca por artista y canción</legend>
         <div className='form-grid'>
             <div>
-                <label>Artista</label>
+                <label>{nombre}</label>
                 <input 
                     type='text'
                     name='artista'
